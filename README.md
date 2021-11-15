@@ -1,5 +1,6 @@
 # FizzBuzz!
 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz!
+
 This repo aims to showcase FizzBuzz in various languages and "benchmark" them as well.
 
 # Rules
