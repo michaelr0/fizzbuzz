@@ -35,7 +35,9 @@ Benchmark 1: Rust/println/target/release/fizzbuzz
 ```
 
 ### WriteLn
+```
 hyperfine -w 3 'Rust/writeln/target/release/fizzbuzz'
 Benchmark 1: Rust/writeln/target/release/fizzbuzz
   Time (mean ± σ):      45.7 ms ±   0.9 ms    [User: 32.1 ms, System: 12.9 ms]
   Range (min … max):    41.8 ms …  47.2 ms    61 runs
+```
