@@ -26,9 +26,16 @@ Benchmark 1: php PHP/fizzbuzz.php
 ```
 
 ## Rust
+### PrintLn
 ```
-hyperfine -w 3 'Rust/target/release/fizzbuzz'
-Benchmark 1: Rust/target/release/fizzbuzz
+hyperfine -w 3 'Rust/println/target/release/fizzbuzz'
+Benchmark 1: Rust/println/target/release/fizzbuzz
   Time (mean ± σ):      3.494 s ±  0.007 s    [User: 0.190 s, System: 3.301 s]
   Range (min … max):    3.485 s …  3.507 s    10 runs
 ```
+
+### WriteLn
+hyperfine -w 3 'Rust/writeln/target/release/fizzbuzz'
+Benchmark 1: Rust/writeln/target/release/fizzbuzz
+  Time (mean ± σ):      45.7 ms ±   0.9 ms    [User: 32.1 ms, System: 12.9 ms]
+  Range (min … max):    41.8 ms …  47.2 ms    61 runs
