@@ -1,18 +1,17 @@
-use std::io::{self, Write};
+use std::io::{self, BufWriter, Write};
 
 fn main() {
-    let stdout = io::stdout();
-    let mut handle = io::BufWriter::new(stdout);
+    let mut stdout = BufWriter::new(io::stdout());
 
     for i in 1..=1000000 {
         if i % 15 == 0 {
-            let _ = writeln!(handle, "{}: {}", i, "FizzBuzz");
+            writeln!(stdout, "{}: {}", i, "FizzBuzz").unwrap();
         } else if i % 3 == 0 {
-            let _ = writeln!(handle, "{}: {}", i, "Fizz");
+            writeln!(stdout, "{}: {}", i, "Fizz").unwrap();
         } else if i % 5 == 0 {
-            let _ = writeln!(handle, "{}: {}", i, "Buzz");
+            writeln!(stdout, "{}: {}", i, "Buzz").unwrap();
         } else {
-            let _ = writeln!(handle, "{}: {}", i, i);
+            writeln!(stdout, "{}: {}", i, i).unwrap();
         }
     }
 }
