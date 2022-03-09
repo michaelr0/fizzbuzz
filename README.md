@@ -10,11 +10,20 @@ This repo aims to showcase FizzBuzz in various languages and "benchmark" them as
 * Must echo/print/output i: * (eg: 15: fizzbuzz)
 
 ## Go
+### PrintLn
 ```
-hyperfine -w 3 'Go/fizzbuzz'
+hyperfine -w 3 'Go/println/fizzbuzz'
 Benchmark 1: Go/fizzbuzz
-  Time (mean ± σ):      2.305 s ±  0.010 s    [User: 0.306 s, System: 2.009 s]
-  Range (min … max):    2.290 s …  2.319 s    10 runs
+  Time (mean ± σ):      2.714 s ±  0.011 s    [User: 0.537 s, System: 2.204 s]
+  Range (min … max):    2.697 s …  2.733 s    10 runs
+```
+
+### FprintLn
+```
+hyperfine -w 3 'Go/fprintln/fizzbuzz'
+Benchmark 1: Go/fizzbuzz
+  Time (mean ± σ):     140.7 ms ±   2.9 ms    [User: 124.0 ms, System: 19.9 ms]
+  Range (min … max):   133.5 ms … 143.9 ms    20 runs
 ```
 
 ## PHP
